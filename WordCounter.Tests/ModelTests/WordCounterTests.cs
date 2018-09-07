@@ -69,6 +69,5 @@ namespace WordCounter.Tests
       //assert
       Assert.AreEqual(expectedCount, realCount);
     }
-
   }
 }
