@@ -94,6 +94,7 @@ namespace WordCounter.Models
             case "word":
               Console.WriteLine("Please enter word you want to count.");
               userWord = Console.ReadLine();
+              //Change the value of userWord thorugh setter.
               newWordTextCombination.SetSpecifiedWord(userWord);
 
               userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
@@ -103,8 +104,10 @@ namespace WordCounter.Models
             case "text":
               Console.WriteLine("Please enter text you want to analyze.");
               userText = Console.ReadLine();
+              //Change the value of userText thorugh setter.
               newWordTextCombination.SetText(userText);
 
+              //Get a new value of userText through getter and also change user WordsArray accordingly.
               userWordsArray = RepeatCounter.TextToWords(newWordTextCombination.GetText());
               userCount = RepeatCounter.MatchCount(userWord,userWordsArray);
               Console.WriteLine("I found "+userCount+" number of occurence(s) of "+userWord+" inside the given text!");
