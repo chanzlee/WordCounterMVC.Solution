@@ -1,6 +1,6 @@
 # Word Counter
 
-### By _Chan Lee_ , Sep 7th, 2018
+#### by _Chan Lee_ , 09/07/2018
 
 ## Description
 
@@ -11,10 +11,11 @@ This program find occurrences of specified word in given texts. User must enter 
 
 | Specs    |  Input | Output | Rationale   
 | ------------- |------------- |------------- |:-------------:|
-| Program receives texts and split into word units by creating string array, while ignoring white spaces and punctuations. | "I, have a dream!"| ["I","have","a","dream"] | _(White spaces and punctuations are ignored.)_
-| Program stores both specified word and text in lower cases, for case insensitive match. | "Dream" | "dream" | _(Data will be a string and string array, each string of word will be lowercased.)_
-| Program returns number of occurrences on given text, just for perfect match | Specified word: Dessert / Text: Dessert Desert Desssert iDessert Desserts  | Occurrence: 1 | _(Program counts only perfect match.)_
-| Program detects words inside the given text and store it as a string array | "Free at last!" | {"free", "at", "last", ""}; | _(Program detects punctuations and space to separate text into words. Note that the last element of array is an **empty string**, added because of ! character at the end of given text.)_
+| Program stores specified word in lower cases, for case insensitive match. | "Dream" | "dream" | _(Data will be stored a string each string of word will be lowercased.)_
+| Program stores texts in lower cases. | "I HAVE A DREAM!"| "i have a dream!" | _(Text should be also lower cased for case-insensitive match.)_
+| Program detects words inside the given text and store it as a string array. | "Free at last!" | {"free", "at", "last", ""}; | _(Program detects punctuations and space to separate text into words. Note that the last element of array is an **empty string**, added because of ! character at the end of given text.)_
+| Program returns counts only in the case of perfect match. | Word: "Dream" / Text: "Dream Dreaam Drem Dream Dreaming"  | Match: "Dream" | _(Program counts only perfect match.)_
+| Program returns final counts to users. | Word: "Free" / Text: "Free at last! Free at last! Thank God Almighty, we are free at last!" | Count = 3 | _(return total number of case-insensitive, perfect match.)_
 
 
 ## Setup/Installation Requirements
@@ -47,6 +48,6 @@ _ChanEthanLee@gmail.com_
 * C#/.Net Core 1.1
 * Mono
 
-### Licensed under MIT
+#### Licensed under MIT
 
 ### _Chan Lee_ Copyright (c) 2018
