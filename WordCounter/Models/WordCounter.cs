@@ -33,12 +33,14 @@ namespace WordCounter.Models
 
         public static string[] TextToWords(string originalText)
         {
+            //Puntuations and space works as separators
             char[] charDelimiter = new char[] {'.',',',';',':','?','!',' '};
             string[] words = originalText.Split(charDelimiter);
             return words;
         }
 
 
+        //Loop through words array and find string matching the specified word.
         public static int MatchCount(string specifiedWord, string[] wordsFromText)
         {
           int count = 0;
@@ -57,38 +59,65 @@ namespace WordCounter.Models
     {
         public static void Main()
         {
+          // Initial word / text setup
+
           Console.WriteLine("Welcome to Chan's Word Counter.");
           Console.WriteLine("Please enter word you want to count");
           string userWord = Console.ReadLine();
           Console.WriteLine("Please enter text you want to analyze.");
           string userText = Console.ReadLine();
 
+          //Instantiate new word/text combination
           RepeatCounter newWordTextCombination = new RepeatCounter(userWord, userText);
+          //split text into words array
           string[] userWordsArray = RepeatCounter.TextToWords(newWordTextCombination.GetText());
+          //Run counting function with given inputs
           int userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
+
           Console.WriteLine("I found "+userCount+" number of occurence(s) inside the given text!");
 
 
 
+          // Change word or text
 
+          bool repeat = true;
+          //repeat will be come false when user type "Quit" in console.
+          while (repeat == true)
+          {
+          //Receive menu Input
+          Console.WriteLine("Enter 'word' to change word to count, or 'text' to change text to analyze. Enter 'Quit' to exit the program.");
+          string menuInput = Console.ReadLine().ToLower();
 
-          // Console.WriteLine("Enter 'word' to change word to count, or 'text' to change text to analyze.");
-          // string menuInput = Console.ReadLine().ToLower();
-          //
-          //
-          // switch (menuInput)
-          // {
-          //   case "word":
-          //     Console.WriteLine("Please enter word you want to count.");
-          //     string userWord = Console.ReadLine();
-          //
-          //     break;
-          //
-          //   case "text":
-          //     Console.WriteLine("Please enter text you want to analyze.");
-          //     string userText = Console.ReadLine();
-          //     break;
-          // }
+          //Control flow for word/text/quit
+          switch (menuInput)
+          {
+            case "word":
+              Console.WriteLine("Please enter word you want to count.");
+              string userNewWord = Console.ReadLine();
+              newWordTextCombination.SetSpecifiedWord(userNewWord);
+
+              userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
+              Console.WriteLine("I found "+userCount+" number of occurence(s) inside the given text!");
+              break;
+
+            case "text":
+              Console.WriteLine("Please enter text you want to analyze.");
+              string userNewText = Console.ReadLine();
+              newWordTextCombination.SetText(userNewText);
+
+              userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
+              Console.WriteLine("I found "+userCount+" number of occurence(s) inside the given text!");
+              break;
+
+            case "quit":
+              Console.WriteLine("Thank you for using Word Counter!");
+              repeat = false;
+              break;
+
+            default:
+              Console.WriteLine("Please enter valid input")
+          }
+        }
 
         }
     }
