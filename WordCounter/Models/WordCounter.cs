@@ -74,7 +74,7 @@ namespace WordCounter.Models
           //Run counting function with given inputs
           int userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
 
-          Console.WriteLine("I found "+userCount+" number of occurence(s) inside the given text!");
+          Console.WriteLine("I found "+userCount+" number of occurence(s) of "+userWord+" inside the given text!");
 
 
 
@@ -93,29 +93,31 @@ namespace WordCounter.Models
           {
             case "word":
               Console.WriteLine("Please enter word you want to count.");
-              string userNewWord = Console.ReadLine();
-              newWordTextCombination.SetSpecifiedWord(userNewWord);
+              userWord = Console.ReadLine();
+              newWordTextCombination.SetSpecifiedWord(userWord);
 
               userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
-              Console.WriteLine("I found "+userCount+" number of occurence(s) inside the given text!");
+              Console.WriteLine("I found "+userCount+" number of occurence(s) of "+userWord+" inside the given text!");
               break;
 
             case "text":
               Console.WriteLine("Please enter text you want to analyze.");
-              string userNewText = Console.ReadLine();
-              newWordTextCombination.SetText(userNewText);
+              userText = Console.ReadLine();
+              newWordTextCombination.SetText(userText);
 
-              userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
-              Console.WriteLine("I found "+userCount+" number of occurence(s) inside the given text!");
+              userWordsArray = RepeatCounter.TextToWords(newWordTextCombination.GetText());
+              userCount = RepeatCounter.MatchCount(userWord,userWordsArray);
+              Console.WriteLine("I found "+userCount+" number of occurence(s) of "+userWord+" inside the given text!");
               break;
 
             case "quit":
-              Console.WriteLine("Thank you for using Word Counter!");
+              Console.WriteLine("Thank you for using Word Counter...");
               repeat = false;
               break;
 
             default:
-              Console.WriteLine("Please enter valid input")
+              Console.WriteLine("Please enter valid input");
+              break;
           }
         }
 
