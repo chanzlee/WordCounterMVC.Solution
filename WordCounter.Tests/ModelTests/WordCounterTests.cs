@@ -26,5 +26,18 @@ namespace WordCounter.Tests
       Assert.AreEqual("i have a dream", result);
     }
 
+    [TestMethod]
+    public void TextToSentence_ReturnSentences_StringArray()
+    {
+      RepeatCounter newWordTextCombination = new RepeatCounter("","");
+      newWordTextCombination.SetText("I have a dream. That my four little children will one day live in a nation: where they will not be judged by their colors, but by their characters!");
+      string[] expectedSentences = {"i have a dream"," that my four little children will one day live in a nation"," where they will not be judged by their colors"," but by their characters",""};
+
+      string originalText = newWordTextCombination.GetText();
+      string[] realSentences = RepeatCounter.TextToSentence(originalText);
+
+      CollectionAssert.AreEqual(expectedSentences, realSentences);
+    }
+
   }
 }
