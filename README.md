@@ -13,7 +13,7 @@ This program find occurrences of specified word in given texts. User must enter 
 | ------------- |------------- |------------- |:-------------:|
 | Program stores specified word in lower cases, for case insensitive match. | "Dream" | "dream" | _(Data will be stored a string each string of word will be lowercased.)_
 | Program stores texts in lower cases. | "I HAVE A DREAM!"| "i have a dream!" | _(Text should be also lower cased for case-insensitive match.)_
-| Program detects words inside the given text and store it as a string array. | "Free at last!" | {"free", "at", "last", ""}; | _(Program detects punctuations and space to separate text into words. Note that the last element of array is an **empty string**, added because of ! character at the end of given text.)_
+| Program detects words inside the given text and store it as a string array. | "Free at last!" | {"free", "at", "last", ""}; | _(Program detects punctuations and space to separate text into words. Note that the last element of array is an **empty string**, added because of '!' at the end of the text.)_
 | Program returns counts only in the case of perfect match. | Word: "Dream" / Text: "Dream Dreaam Drem Dream Dreaming"  | Match: "Dream" | _(Program counts only perfect match.)_
 | Program returns final counts to users. | Word: "Free" / Text: "Free at last! Free at last! Thank God Almighty, we are free at last!" | Count = 3 | _(return total number of case-insensitive, perfect match.)_
 
