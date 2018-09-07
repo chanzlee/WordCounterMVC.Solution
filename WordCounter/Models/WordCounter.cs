@@ -9,8 +9,8 @@ namespace WordCounter.Models
 
     public RepeatCounter(string specifiedWord, string text)
     {
-      _specifiedWord = specifiedWord.ToLower();
-      _text = text.ToLower();
+      _specifiedWord = specifiedWord;
+      _text = text;
     }
 
     public string GetSpecifiedWord()
