@@ -52,5 +52,21 @@ namespace WordCounter.Tests
       CollectionAssert.AreEqual(expectedWordsArray, realWordsArray);
     }
 
+    [TestMethod]
+    public void MatchCount_ReturnCount_Int()
+    {
+      RepeatCounter newWordTextCombination = new RepeatCounter("","");
+      newWordTextCombination.SetSpecifiedWord("dream");
+      newWordTextCombination.SetText("I have a dream. That my four little children will one day live in a nation. I have a dream.");
+      string originalText = newWordTextCombination.GetText();
+      string[] wordsArray = RepeatCounter.TextToWords(originalText);
+      string specifiedWord = newWordTextCombination.GetSpecifiedWord();
+      int expectedCount = 2;
+
+      int realCount = RepeatCounter.MatchCount(specifiedWord, wordsArray);
+
+      Assert.AreEqual(expectedCount, realCount);
+    }
+
   }
 }
