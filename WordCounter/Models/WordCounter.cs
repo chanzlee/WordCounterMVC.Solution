@@ -6,6 +6,7 @@ namespace WordCounter.Models
   {
     private string _specifiedWord;
     private string _text;
+    private int _countResult;
 
     public RepeatCounter(string specifiedWord, string text)
     {
@@ -31,6 +32,17 @@ namespace WordCounter.Models
       _text = text;
     }
 
+    public int GetCountResult()
+    {
+      return _countResult;
+    }
+    public void SetCountResult(int newCountResult)
+    {
+      _countResult = newCountResult;
+    }
+
+
+
     public static string[] TextToWords(string originalText)
     {
       //Puntuations and space works as separators
@@ -51,6 +63,8 @@ namespace WordCounter.Models
           count++;
         }
       }
+
+
       return count;
     }
   }

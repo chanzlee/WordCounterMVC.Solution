@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+<form action="/wordcounter" method="post">
+  <div class="form-group">
+    <label for="new-word">Word:</label>
+    <input type="text" class="form-control" id="new-word" name="new-word" placeholder="Enter word you want to count">
+
+    <label for="new-text">Text:</label>
+    <textarea class="form-control" id="new-text" rows="3" name="new-text" placeholder="Enter text to analyze"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Count!</button>
+</form>

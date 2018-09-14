@@ -17,14 +17,20 @@ namespace WordCounter.Controllers
         return View();
       }
 
-      // [HttpPost("/wordcounter")]
-      // public ActionResult Create()
-      // {
-      //   // Survivor newSurvivor = new Survivor(Request.Form["survName"]);
-      //   // Survivor.currentSurvivor = newSurvivor;
-      //   // return View("Index", Survivor.currentSurvivor);
-      // }
+      [HttpPost("/wordcounter")]
+      public ActionResult Create()
+      {
+        RepeatCounter newWordTextCombination = new RepeatCounter(Request.Form["new-word"],Request.Form["new-text"]);
 
+        //Split function
+        string[] userWordsArray = RepeatCounter.TextToWords(newWordTextCombination.GetText());
 
+        //Counting function
+        int userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
+
+        newWordTextCombination.SetCountResult(userCount);
+
+        return View("Index", newWordTextCombination);
+      }
     }
 }
