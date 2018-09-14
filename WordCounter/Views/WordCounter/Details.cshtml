@@ -1,0 +1,14 @@
+@{
+  Layout = "_Layout";
+}
+
+<h3>WordCounter Result</h3>
+<p><a href='/wordcounters/@count.GetId()'>Specified Word: "@count.GetSpecifiedWord()"</p>
+<br>
+<p>Text: "@count.GetText()"</p>
+<br>
+<p>Analisys: "@count.GetSpecifiedWord()" was found @count.GetCountResult() times.</p>
+
+
+<p><a href='/wordcounters'>Return to count history</a></p>
+<p><a href='/'>Return to Main Page</a></p>

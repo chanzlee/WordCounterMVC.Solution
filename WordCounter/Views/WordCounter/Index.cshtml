@@ -3,12 +3,17 @@
 }
 
 <div class="container">
-  <h3>WordCounter Result</h3>
-  <p>Specified Word: "@Model.GetSpecifiedWord()"</p>
+
+@foreach(var count in Model)
+{
+  <h3>Result @count.GetId()</h3>
+  <p>Specified Word: "@count.GetSpecifiedWord()"</p>
   <br>
-  <p>Text: "@Model.GetText()"</p>
+  <p>Text: "@count.GetText()"</p>
   <br>
-  <p>Analisys: "@Model.GetSpecifiedWord()" was found @Model.GetCountResult() times.</p>
+  <p>Analisys: "@count.GetSpecifiedWord()" was found @count.GetCountResult() times.</p>
+}
 </div>
 
-<p><a href="/wordcounter/new">Go back to input field</a></p>
+<p><a href="/wordcounters/new">Try another word counting</a></p>
+<p><a href="/wordcounters">See past word counts</a></p>
