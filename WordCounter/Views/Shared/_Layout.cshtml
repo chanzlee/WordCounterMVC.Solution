@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>WordCounter</title>
+      <script src="~/js/jquery-3.3.1.js"></script>
+      <script src="~/js/scripts.js"></script>
+      <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+  </head>
+  <body>
+      @Html.Partial("_NavBar")
+      <div class="container">
+        <div class="jumbotron">
+          <h1>Chan's Word Counter</h1>
+        </div>
+          @RenderBody()
+          <hr />
+          <footer>
+              <p>&copy; @DateTime.Now.Year - Chan's WordCounter</p>
+          </footer>
+      </div>
+
+
+  </body>
+</html>
