@@ -1,6 +1,6 @@
 # Word Counter
 
-#### by _Chan Lee_ , 09/07/2018
+#### by _Chan Lee_ , 09/14/2018
 
 ## Description
 
@@ -26,12 +26,13 @@ This program find occurrences of specified word in given texts. User must enter 
 ```
 2. Navigate into the directory
 ```
-    $ cd WordCount.Solution/Models/
+    $ cd WordCount.Solution/WordCounter/
 ```
-3. Run WordCount.exe using mono
+3. Run local hosting through dotnet run
 ```
-    $ mono WordCounter.exe
+    $ dotnet run
 ```
+4. Connect to http://localhost:5000 in web browser.
 
 
 ## Known Bugs
@@ -46,7 +47,10 @@ _ChanEthanLee@gmail.com_
 
 * Visual Studio
 * C#/.Net Core 1.1
-* Mono
+* AspNetCore MVC 1.1.3
+* JavaScript
+* CSS
+* HTML
 
 #### Licensed under MIT
 
