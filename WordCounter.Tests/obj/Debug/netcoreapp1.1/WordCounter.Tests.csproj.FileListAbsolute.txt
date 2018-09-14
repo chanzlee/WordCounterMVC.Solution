@@ -1,0 +1,17 @@
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounter.Tests.csprojAssemblyReference.cache
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounter.Tests.csproj.CoreCompileInputs.cache
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounter.Tests.AssemblyInfoInputs.cache
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounter.Tests.AssemblyInfo.cs
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.Tests.deps.json
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.Tests.runtimeconfig.json
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.Tests.runtimeconfig.dev.json
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.Tests.dll
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.Tests.pdb
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.dll
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/bin/Debug/netcoreapp1.1/WordCounter.pdb
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounter.Tests.csproj.CopyComplete
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounter.Tests.dll
+/Users/goenchan/Desktop/WordCount/WordCounter.Tests/obj/Debug/netcoreapp1.1/WordCounter.Tests.pdb
