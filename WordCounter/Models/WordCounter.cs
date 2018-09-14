@@ -46,7 +46,7 @@ namespace WordCounter.Models
     public static string[] TextToWords(string originalText)
     {
       //Puntuations and space works as separators
-      char[] charDelimiter = new char[] {'.',',',';',':','?','!',' '};
+      char[] charDelimiter = new char[] {'.',',',';',':','?','!' ,'@','#','$','%','^','&','*','(',')','_','+','-','=','<','>',' '};
       string[] words = originalText.Split(charDelimiter);
       return words;
     }
