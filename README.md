@@ -37,7 +37,9 @@ This program find occurrences of specified word in given texts. User must enter 
 
 ## Known Bugs
 
-None
+*None.*
+*Module other than WordCounter is not added yet.*
+
 
 ## Support and contact details
 
