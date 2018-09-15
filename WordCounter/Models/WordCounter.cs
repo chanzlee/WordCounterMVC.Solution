@@ -63,6 +63,10 @@ namespace WordCounter.Models
     {
       return _instances[searchId-1];
     }
+    public static void Clear()
+    {
+      _instances.Clear();
+    }
 
 
 
@@ -86,7 +90,6 @@ namespace WordCounter.Models
           count++;
         }
       }
-
 
       return count;
     }

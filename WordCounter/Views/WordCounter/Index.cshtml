@@ -4,16 +4,24 @@
 
 <div class="container">
 
-@foreach(var count in Model)
-{
-  <h3>Result @count.GetId()</h3>
-  <p>Specified Word: "@count.GetSpecifiedWord()"</p>
-  <br>
-  <p>Text: "@count.GetText()"</p>
-  <br>
-  <p>Analisys: "@count.GetSpecifiedWord()" was found @count.GetCountResult() times.</p>
-}
+  @if (@Model.Count == 0)
+  {
+    <h3>There is no past word counting history</h3>
+  }
+  else
+  {
+    @foreach(var count in Model)
+    {
+      <h3>Result @count.GetId()</h3>
+      <p>Specified Word: "@count.GetSpecifiedWord()"</p>
+      <p>Text: "@count.GetText()"</p>
+      <p>Analisys: "@count.GetSpecifiedWord()" was found @count.GetCountResult() time(s).</p>
+      <br>
+    }
+    <form class="delete" action="/wordcounters/delete" method="post">
+      <button class="btn btn-secondary" type="submit">Delete all</button>
+    </form>
+  }
 </div>
 
 <p><a href="/wordcounters/new">Try another word counting</a></p>
-<p><a href="/wordcounters">See past word counts</a></p>

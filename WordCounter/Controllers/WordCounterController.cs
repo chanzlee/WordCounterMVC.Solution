@@ -30,10 +30,22 @@ namespace WordCounter.Controllers
       //Counting function
       int userCount = RepeatCounter.MatchCount(newWordTextCombination.GetSpecifiedWord(),userWordsArray);
 
+      //Set counting result
       newWordTextCombination.SetCountResult(userCount);
+
+      //Get instances for model
       List<RepeatCounter> allRepeatCounters = RepeatCounter.GetAll();
 
-      return View("Index", allRepeatCounters);
+      return View("Index",allRepeatCounters);
+    }
+
+    [HttpPost("/wordcounters/delete")]
+    public ActionResult Delete()
+    {
+      RepeatCounter.Clear();
+      List<RepeatCounter> allRepeatCounters = RepeatCounter.GetAll();
+
+      return View("Index",allRepeatCounters);
     }
   }
 }

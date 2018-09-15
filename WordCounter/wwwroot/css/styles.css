@@ -19,6 +19,10 @@
   margin-top: 5%;
 }
 
+.delete {
+  background-color: white;
+}
+
 h3 {
   margin-top: 3%;
 }
@@ -33,7 +37,7 @@ label {
   margin-top: 5%;
 }
 
-.btn {
+button {
   background-color: #3AAEB9;
   margin-bottom: 3%;
   margin-top: 3%;
