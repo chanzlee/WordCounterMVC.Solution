@@ -6,6 +6,7 @@
       <title>WordCounter</title>
       <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css">
       <link href="~/css/styles.css" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=latin-ext" rel="stylesheet">
       <script src="~/js/jquery-3.3.1.js"></script>
       <script src="~/js/scripts.js"></script>
       <script src="~/js/bootstrap.js"></script>
@@ -19,10 +20,10 @@
         </div>
           @RenderBody()
           <hr />
-          <footer>
-              <p>&copy; @DateTime.Now.Year - Chan's WordCounter</p>
-          </footer>
       </div>
+      <footer class="footer-custom">
+        <p>&copy; @DateTime.Now.Year - Chan's WordCounter</p>
+      </footer>
 
 
   </body>

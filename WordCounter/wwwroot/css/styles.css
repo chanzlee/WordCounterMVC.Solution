@@ -1,4 +1,5 @@
 * {
+  font-family: 'Roboto', sans-serif;
   text-align:center;
 }
 
@@ -19,8 +20,14 @@
   margin-top: 5%;
 }
 
-.delete {
+form.delete {
   background-color: white;
+}
+
+.footer-custom {
+  padding: 3%;
+  background-color: #c7efcf;
+  font-size: 11px;
 }
 
 h3 {
